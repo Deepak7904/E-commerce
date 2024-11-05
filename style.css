@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    height: 86px;
+    align-items: center;
+    /* border-bottom: 1px solid black; */
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #5c6bc0, #2da0a8);
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+
+nav,a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.5s ease-in-out;
+}
+a:hover{
+    color: black;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+main{
+    margin-top:86px;
+}
+.logo{
+    height :50px;
+}
+.hero{
+    background: linear-gradient(to right, #5c6bc0, #2da0a8);
+    /* background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
+    height:300px;
+    /* border-radius: 8px; */
+    display: flex;
+    justify-content: space-between;
+    
+}
+@keyframes popup{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.container{
+    width:90%;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: popup 2s forwards;
+}
+h1{
+    font-size:xx-large;
+    animation: none;
+}
+p{
+    font-weight: 500;
+    font-size: 15px;
+}
+#hero-cont{
+    padding-top: 100px;
+    width: 50%;
+
+}
+.hero-image{
+    width: 50%;
+    height: 300px;
+    /* overflow: visible; */
+}
+.hero-image img{
+    height: 300px;
+    width: 100%;
+}
+
+.button{
+    background-color: #2da0a8;
+    color:white;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.categories{
+    text-align: center;
+    padding : 4em 0;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    /* border-radius: 8px; */
+    /* justify-content: space-evenly; */
+}
+
+.categories h1{
+    color: black;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    
+}
+
+.category{
+    background: #fff;
+    padding: 1em;
+    margin-top: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.9em;
+}
+.category img{
+    width:100%;
+    height:auto;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+.category h3{
+    font-size: 1em;
+    margin: 0;
+}
+
+
+/* featured products */
+.featured-products{
+    padding: 4em 0;
+    text-align: center;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+.featured-products h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.grid{
+    display: grid;
+    gap: 1.5em;
+}
+
+.product{
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.product img{
+    width:100%;
+    height:auto;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+.product h3{
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+.product p{
+    font-size: 0.9em;
+    
+}
+
+/* product feature comparison table */
+.product-features{
+    padding: 4em 0;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    text-align: center;
+}
+
+.product-features h2{
+    font-size: 2em;
+    /* margin-bottom: 1em; */
+    color: black;
+}
+
+.comparison-table{
+    width: 100%;
+    margin-top: 2em;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.comparison-table th,
+.comparison-table td{
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.comparison-table th{
+    background-color: #2da0a8;
+    color: black;
+    font-weight: bold;
+}
+
+/* testimonial section */
+.testimonials{
+    background-color: black;
+    color: rosybrown;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.testimonial{
+    background-color: rosybrown;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+}
+.testimonial p{
+    font-size: 1em;
+    font-style: italic;
+    color: black;
+}
+.testimonial h3{
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: black;
+}
+
+/* footer styles */
+
+.footer{
+    background-color: black;
+    color: rosybrown;
+    text-align: center;
+    padding: 1em 0;
+}
+.footer p{
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
